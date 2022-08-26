@@ -5,7 +5,7 @@
 replicaCount: 1
 image:
   repository: esviderskii/argo-test
-  tag: build-876d268
+  tag: build-9f846d1
   pullPolicy: Always
 service:
   type: ClusterIP
