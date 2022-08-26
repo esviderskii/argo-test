@@ -64,6 +64,7 @@ jobs:
          git config user.email "<>"
          git add helm/values.yaml
          git commit -m "update code version to ${{ steps.vars.outputs.sha_short }}"
+         echo "Token: ${{ secrets.ACTIONS_TOKEN }}"
 
      - name: Push changes
        uses: ad-m/github-push-action@master
