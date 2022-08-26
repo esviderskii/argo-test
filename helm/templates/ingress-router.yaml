@@ -1,0 +1,15 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: {{ template "argo-test.fullname" . }}
+  namespace: default
+spec:
+  routes:
+    - kind: Rule
+      match: Host(`argotest.platform.ammer.tech`)
+      priority: 10
+      services:
+        - name: {{ template "argo-test.fullname" . }}
+          port: 80
+#  tls:
+#    secretName: argocd-tls
