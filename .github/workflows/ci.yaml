@@ -35,7 +35,7 @@ jobs:
        with:
          push: true
          build-args: APP_BUILD_INFO=${{ steps.vars.outputs.sha_short }}
-         tags: esviderskii/argo:build-${{ steps.vars.outputs.sha_short }}
+         tags: esviderskii/argo-test:build-${{ steps.vars.outputs.sha_short }}
   cd:
     name: CD
     needs: ci
